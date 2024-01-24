@@ -3,35 +3,84 @@
 
 ## Instructions:
 Please fill in the blank
-```cplus
+```cplusplus
 /*
-* Name:
+* Name: Jason Lavery
 */
 
 // Question: Create a C++ class representing a car with attributes like model, year, and color. Include a method to display car details.
-// Answer: --------------------------------------- here
+// Answer: -------------I designed my solution below-------------------------- here
+// This is my Program for the
 
-#include <iostream>
-#include <string>
+#include <iostream> // include input and output
+#include <iomanip> // include input and output manipulation
+#include <cstring> // include strings
+
+using namespace std; // standard namess
 
 class Car {
-public:
-    std::string model;
+private:
+    string model;
     int year;
+    string color;
+public:
+    
+    string setModel()
+    {
+        string myModel;
+        cout << "What is the model of your car? ";
+        cin >> myModel;
+        return myModel;
+    }
 
+
+    void getModel(string myModel)
+    {
+       model = myModel;
+    }
+
+    int setYear()
+    {
+        int myYear;
+        cout << "What is the model of your car? ";
+        cin >> myYear;
+        return myYear;
+    }
+
+    void getYear(int myYear)
+    {
+       year = myYear;
+    }
+
+    string setColor()
+    {
+        string myColor;
+        cout << "What is the model of your car? ";
+        cin >> myColor;
+        return myColor;
+    }
+
+    void getColor(string myColor)
+    {
+       color = myColor;
+    }
 
     void displayDetails() {
-        std::cout << "Model: " << model << ", Year: " << year << ", Color: " << color << std::endl;
+        cout << "Model: " << model << ", Year: " << year << ", Color: " << color << std::endl;
     }
 };
 
 int main() {
     Car myCar;
+    string theModel = myCar.setModel();
+    myCar.getModel(theModel);
 
+    int theYear = myCar.setYear();
+    myCar.getYear(theYear);
+
+    string theColor = myCar.setColor();
+    myCar.getColor(theColor);
 
     myCar.displayDetails();
-
     return 0;
 }
-
-```
